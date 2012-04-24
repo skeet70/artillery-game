@@ -66,18 +66,42 @@
                                     <segue destination="2" kind="modal" id="e2z-uK-zW8"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleAspectFit" image="tank.png" id="dyn-rZ-paY">
-                                <rect key="frame" x="8" y="285" width="86" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleAspectFit" image="tank2.png" id="SqV-la-iYz">
-                                <rect key="frame" x="234" y="285" width="86" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" id="E1q-2w-xRX">
                                 <rect key="frame" x="0.0" y="354" width="320" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" id="oBt-UV-v8V">
+                                <rect key="frame" x="-3" y="278" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" image="tank.png" id="dyn-rZ-paY">
+                                        <rect key="frame" x="4" y="7" width="86" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tank_cannon.png" id="7l1-Gz-4nX">
+                                        <rect key="frame" x="57" y="20" width="22" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="bVy-Xj-2xd">
+                                <rect key="frame" x="234" y="278" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" image="tank2.png" id="SqV-la-iYz">
+                                        <rect key="frame" x="4" y="7" width="86" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tank_cannon2.png" id="sHU-UG-QzZ">
+                                        <rect key="frame" x="14" y="20" width="22" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -86,12 +110,14 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="514" y="62"/>
+            <point key="canvasLocation" x="430" y="32"/>
         </scene>
     </scenes>
     <resources>
         <image name="tank.png" width="137" height="142"/>
         <image name="tank2.png" width="137" height="142"/>
+        <image name="tank_cannon.png" width="18" height="22"/>
+        <image name="tank_cannon2.png" width="18" height="22"/>
     </resources>
     <classes>
         <class className="RPMViewController" superclassName="UIViewController">
