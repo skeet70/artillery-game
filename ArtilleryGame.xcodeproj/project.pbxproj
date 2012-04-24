@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE49DCB1547422000FC675E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCA1547422000FC675E /* UIKit.framework */; };
+		3DE49DCD1547422000FC675E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCC1547422000FC675E /* Foundation.framework */; };
+		3DE49DCF1547422000FC675E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCE1547422000FC675E /* CoreGraphics.framework */; };
+		3DE49DD51547422000FC675E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE49DD31547422000FC675E /* InfoPlist.strings */; };
+		3DE49DD71547422000FC675E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE49DD61547422000FC675E /* main.m */; };
+		3DE49DDB1547422000FC675E /* RPMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE49DDA1547422000FC675E /* RPMAppDelegate.m */; };
+		3DE49DDE1547422000FC675E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE49DDC1547422000FC675E /* MainStoryboard.storyboard */; };
+		3DE49DE11547422000FC675E /* RPMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE49DE01547422000FC675E /* RPMViewController.m */; };
+		3DE49DE91547422100FC675E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DE81547422100FC675E /* SenTestingKit.framework */; };
+		3DE49DEA1547422100FC675E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCA1547422000FC675E /* UIKit.framework */; };
+		3DE49DEB1547422100FC675E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCC1547422000FC675E /* Foundation.framework */; };
+		3DE49DF31547422100FC675E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE49DF11547422100FC675E /* InfoPlist.strings */; };
+		3DE49DF61547422100FC675E /* ArtilleryGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE49DF51547422100FC675E /* ArtilleryGameTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DE49DEC1547422100FC675E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE49DBD1547422000FC675E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE49DC51547422000FC675E;
+			remoteInfo = ArtilleryGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DE49DC61547422000FC675E /* ArtilleryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtilleryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE49DCA1547422000FC675E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3DE49DCC1547422000FC675E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DE49DCE1547422000FC675E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DE49DD21547422000FC675E /* ArtilleryGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArtilleryGame-Info.plist"; sourceTree = "<group>"; };
+		3DE49DD41547422000FC675E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE49DD61547422000FC675E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DE49DD81547422000FC675E /* ArtilleryGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArtilleryGame-Prefix.pch"; sourceTree = "<group>"; };
+		3DE49DD91547422000FC675E /* RPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPMAppDelegate.h; sourceTree = "<group>"; };
+		3DE49DDA1547422000FC675E /* RPMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPMAppDelegate.m; sourceTree = "<group>"; };
+		3DE49DDD1547422000FC675E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3DE49DDF1547422000FC675E /* RPMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPMViewController.h; sourceTree = "<group>"; };
+		3DE49DE01547422000FC675E /* RPMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPMViewController.m; sourceTree = "<group>"; };
+		3DE49DE71547422100FC675E /* ArtilleryGameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtilleryGameTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE49DE81547422100FC675E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DE49DF01547422100FC675E /* ArtilleryGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArtilleryGameTests-Info.plist"; sourceTree = "<group>"; };
+		3DE49DF21547422100FC675E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE49DF41547422100FC675E /* ArtilleryGameTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtilleryGameTests.h; sourceTree = "<group>"; };
+		3DE49DF51547422100FC675E /* ArtilleryGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtilleryGameTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DE49DC31547422000FC675E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE49DCB1547422000FC675E /* UIKit.framework in Frameworks */,
+				3DE49DCD1547422000FC675E /* Foundation.framework in Frameworks */,
+				3DE49DCF1547422000FC675E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE49DE31547422100FC675E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE49DE91547422100FC675E /* SenTestingKit.framework in Frameworks */,
+				3DE49DEA1547422100FC675E /* UIKit.framework in Frameworks */,
+				3DE49DEB1547422100FC675E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE49DBB1547422000FC675E = {
+			isa = PBXGroup;
+			children = (
+				3DE49DD01547422000FC675E /* ArtilleryGame */,
+				3DE49DEE1547422100FC675E /* ArtilleryGameTests */,
+				3DE49DC91547422000FC675E /* Frameworks */,
+				3DE49DC71547422000FC675E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DE49DC71547422000FC675E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE49DC61547422000FC675E /* ArtilleryGame.app */,
+				3DE49DE71547422100FC675E /* ArtilleryGameTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE49DC91547422000FC675E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DE49DCA1547422000FC675E /* UIKit.framework */,
+				3DE49DCC1547422000FC675E /* Foundation.framework */,
+				3DE49DCE1547422000FC675E /* CoreGraphics.framework */,
+				3DE49DE81547422100FC675E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DE49DD01547422000FC675E /* ArtilleryGame */ = {
+			isa = PBXGroup;
+			children = (
+				3DE49DD91547422000FC675E /* RPMAppDelegate.h */,
+				3DE49DDA1547422000FC675E /* RPMAppDelegate.m */,
+				3DE49DDC1547422000FC675E /* MainStoryboard.storyboard */,
+				3DE49DDF1547422000FC675E /* RPMViewController.h */,
+				3DE49DE01547422000FC675E /* RPMViewController.m */,
+				3DE49DD11547422000FC675E /* Supporting Files */,
+			);
+			path = ArtilleryGame;
+			sourceTree = "<group>";
+		};
+		3DE49DD11547422000FC675E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE49DD21547422000FC675E /* ArtilleryGame-Info.plist */,
+				3DE49DD31547422000FC675E /* InfoPlist.strings */,
+				3DE49DD61547422000FC675E /* main.m */,
+				3DE49DD81547422000FC675E /* ArtilleryGame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DE49DEE1547422100FC675E /* ArtilleryGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE49DF41547422100FC675E /* ArtilleryGameTests.h */,
+				3DE49DF51547422100FC675E /* ArtilleryGameTests.m */,
+				3DE49DEF1547422100FC675E /* Supporting Files */,
+			);
+			path = ArtilleryGameTests;
+			sourceTree = "<group>";
+		};
+		3DE49DEF1547422100FC675E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE49DF01547422100FC675E /* ArtilleryGameTests-Info.plist */,
+				3DE49DF11547422100FC675E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DE49DC51547422000FC675E /* ArtilleryGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE49DF91547422100FC675E /* Build configuration list for PBXNativeTarget "ArtilleryGame" */;
+			buildPhases = (
+				3DE49DC21547422000FC675E /* Sources */,
+				3DE49DC31547422000FC675E /* Frameworks */,
+				3DE49DC41547422000FC675E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtilleryGame;
+			productName = ArtilleryGame;
+			productReference = 3DE49DC61547422000FC675E /* ArtilleryGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DE49DE61547422100FC675E /* ArtilleryGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE49DFC1547422100FC675E /* Build configuration list for PBXNativeTarget "ArtilleryGameTests" */;
+			buildPhases = (
+				3DE49DE21547422100FC675E /* Sources */,
+				3DE49DE31547422100FC675E /* Frameworks */,
+				3DE49DE41547422100FC675E /* Resources */,
+				3DE49DE51547422100FC675E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE49DED1547422100FC675E /* PBXTargetDependency */,
+			);
+			name = ArtilleryGameTests;
+			productName = ArtilleryGameTests;
+			productReference = 3DE49DE71547422100FC675E /* ArtilleryGameTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DE49DBD1547422000FC675E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Montana State University";
+			};
+			buildConfigurationList = 3DE49DC01547422000FC675E /* Build configuration list for PBXProject "ArtilleryGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DE49DBB1547422000FC675E;
+			productRefGroup = 3DE49DC71547422000FC675E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DE49DC51547422000FC675E /* ArtilleryGame */,
+				3DE49DE61547422100FC675E /* ArtilleryGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE49DC41547422000FC675E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE49DD51547422000FC675E /* InfoPlist.strings in Resources */,
+				3DE49DDE1547422000FC675E /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE49DE41547422100FC675E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE49DF31547422100FC675E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DE49DE51547422100FC675E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DE49DC21547422000FC675E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE49DD71547422000FC675E /* main.m in Sources */,
+				3DE49DDB1547422000FC675E /* RPMAppDelegate.m in Sources */,
+				3DE49DE11547422000FC675E /* RPMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE49DE21547422100FC675E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE49DF61547422100FC675E /* ArtilleryGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DE49DED1547422100FC675E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE49DC51547422000FC675E /* ArtilleryGame */;
+			targetProxy = 3DE49DEC1547422100FC675E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DE49DD31547422000FC675E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE49DD41547422000FC675E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3DE49DDC1547422000FC675E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE49DDD1547422000FC675E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		3DE49DF11547422100FC675E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE49DF21547422100FC675E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DE49DF71547422100FC675E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DE49DF81547422100FC675E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DE49DFA1547422100FC675E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArtilleryGame/ArtilleryGame-Prefix.pch";
+				INFOPLIST_FILE = "ArtilleryGame/ArtilleryGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3DE49DFB1547422100FC675E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArtilleryGame/ArtilleryGame-Prefix.pch";
+				INFOPLIST_FILE = "ArtilleryGame/ArtilleryGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3DE49DFD1547422100FC675E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ArtilleryGame.app/ArtilleryGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArtilleryGame/ArtilleryGame-Prefix.pch";
+				INFOPLIST_FILE = "ArtilleryGameTests/ArtilleryGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3DE49DFE1547422100FC675E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ArtilleryGame.app/ArtilleryGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArtilleryGame/ArtilleryGame-Prefix.pch";
+				INFOPLIST_FILE = "ArtilleryGameTests/ArtilleryGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DE49DC01547422000FC675E /* Build configuration list for PBXProject "ArtilleryGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE49DF71547422100FC675E /* Debug */,
+				3DE49DF81547422100FC675E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE49DF91547422100FC675E /* Build configuration list for PBXNativeTarget "ArtilleryGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE49DFA1547422100FC675E /* Debug */,
+				3DE49DFB1547422100FC675E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3DE49DFC1547422100FC675E /* Build configuration list for PBXNativeTarget "ArtilleryGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE49DFD1547422100FC675E /* Debug */,
+				3DE49DFE1547422100FC675E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DE49DBD1547422000FC675E /* Project object */;
+}
