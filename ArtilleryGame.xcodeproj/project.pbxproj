@@ -22,6 +22,8 @@
 		3DE49DF61547422100FC675E /* ArtilleryGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE49DF51547422100FC675E /* ArtilleryGameTests.m */; };
 		3DF078FB1547449C005DA49A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF078FA1547449C005DA49A /* Default.png */; };
 		3DF078FE154744A5005DA49A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF078FD154744A5005DA49A /* Default@2x.png */; };
+		3DF0790015474657005DA49A /* lemon_thumbx2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF078FF15474657005DA49A /* lemon_thumbx2.png */; };
+		3DF0790215474674005DA49A /* lemon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF0790115474674005DA49A /* lemon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		3DE49DF51547422100FC675E /* ArtilleryGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtilleryGameTests.m; sourceTree = "<group>"; };
 		3DF078FA1547449C005DA49A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3DF078FD154744A5005DA49A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3DF078FF15474657005DA49A /* lemon_thumbx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lemon_thumbx2.png; sourceTree = "<group>"; };
+		3DF0790115474674005DA49A /* lemon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lemon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		3DE49DBB1547422000FC675E = {
 			isa = PBXGroup;
 			children = (
+				3DF0790115474674005DA49A /* lemon.png */,
+				3DF078FF15474657005DA49A /* lemon_thumbx2.png */,
 				3DF078FD154744A5005DA49A /* Default@2x.png */,
 				3DF078FA1547449C005DA49A /* Default.png */,
 				3DE49DD01547422000FC675E /* ArtilleryGame */,
@@ -232,6 +238,8 @@
 				3DE49DDE1547422000FC675E /* MainStoryboard.storyboard in Resources */,
 				3DF078FB1547449C005DA49A /* Default.png in Resources */,
 				3DF078FE154744A5005DA49A /* Default@2x.png in Resources */,
+				3DF0790015474657005DA49A /* lemon_thumbx2.png in Resources */,
+				3DF0790215474674005DA49A /* lemon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
