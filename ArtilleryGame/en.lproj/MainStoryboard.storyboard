@@ -10,18 +10,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="RPMViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Intro Screen" lineBreakMode="tailTruncation" minimumFontSize="10" id="BGz-bD-SBA">
-                                <rect key="frame" x="114" y="89" width="93" height="21"/>
+                                <rect key="frame" x="194" y="70" width="93" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ib3-pe-3W7">
-                                <rect key="frame" x="124" y="221" width="72" height="37"/>
+                                <rect key="frame" x="204" y="144" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Play">
@@ -32,34 +32,28 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yYr-rl-HRa" kind="push" id="aoD-TN-jM0"/>
+                                    <segue destination="yYr-rl-HRa" kind="push" id="kru-g4-YFl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="d36-zF-UED"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="50" y="-140"/>
+            <point key="canvasLocation" x="-93" y="62"/>
         </scene>
         <scene sceneID="xC8-I9-ES0">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywh-BP-nav" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="yYr-rl-HRa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OfD-cR-X4v">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Play Screen" lineBreakMode="tailTruncation" minimumFontSize="10" id="pJy-FB-6Z3">
-                                <rect key="frame" x="114" y="89" width="92" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2RO-3t-ZSp">
-                                <rect key="frame" x="123" y="211" width="75" height="37"/>
+                                <rect key="frame" x="20" y="409" width="75" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Unplay">
@@ -70,18 +64,31 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="push" id="dpT-0G-9gA"/>
+                                    <segue destination="2" kind="push" id="e2z-uK-zW8"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tank.png" id="dyn-rZ-paY">
+                                <rect key="frame" x="20" y="172" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tank.png" id="0G3-Ip-Uan">
+                                <rect key="frame" x="379" y="172" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="BfA-2s-lAw"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="514" y="62"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tank.png" width="137" height="142"/>
+    </resources>
     <classes>
         <class className="RPMViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RPMViewController.h"/>
