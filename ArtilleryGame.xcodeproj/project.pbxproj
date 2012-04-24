@@ -20,6 +20,8 @@
 		3DE49DEB1547422100FC675E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCC1547422000FC675E /* Foundation.framework */; };
 		3DE49DF31547422100FC675E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE49DF11547422100FC675E /* InfoPlist.strings */; };
 		3DE49DF61547422100FC675E /* ArtilleryGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE49DF51547422100FC675E /* ArtilleryGameTests.m */; };
+		3DF078FB1547449C005DA49A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF078FA1547449C005DA49A /* Default.png */; };
+		3DF078FE154744A5005DA49A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF078FD154744A5005DA49A /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		3DE49DF21547422100FC675E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DE49DF41547422100FC675E /* ArtilleryGameTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtilleryGameTests.h; sourceTree = "<group>"; };
 		3DE49DF51547422100FC675E /* ArtilleryGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtilleryGameTests.m; sourceTree = "<group>"; };
+		3DF078FA1547449C005DA49A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3DF078FD154744A5005DA49A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		3DE49DBB1547422000FC675E = {
 			isa = PBXGroup;
 			children = (
+				3DF078FD154744A5005DA49A /* Default@2x.png */,
+				3DF078FA1547449C005DA49A /* Default.png */,
 				3DE49DD01547422000FC675E /* ArtilleryGame */,
 				3DE49DEE1547422100FC675E /* ArtilleryGameTests */,
 				3DE49DC91547422000FC675E /* Frameworks */,
@@ -224,6 +230,8 @@
 			files = (
 				3DE49DD51547422000FC675E /* InfoPlist.strings in Resources */,
 				3DE49DDE1547422000FC675E /* MainStoryboard.storyboard in Resources */,
+				3DF078FB1547449C005DA49A /* Default.png in Resources */,
+				3DF078FE154744A5005DA49A /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +438,7 @@
 				3DE49DFB1547422100FC675E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DE49DFC1547422100FC675E /* Build configuration list for PBXNativeTarget "ArtilleryGameTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +447,7 @@
 				3DE49DFE1547422100FC675E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
