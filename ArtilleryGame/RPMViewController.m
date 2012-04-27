@@ -84,6 +84,7 @@ static int enemy, player, enemyTurret, playerTurret;
             [[turret superview] addSubview:shell];
             
             // fire the shell
+            [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1/50)];
         }
         
     }
@@ -96,13 +97,20 @@ static int enemy, player, enemyTurret, playerTurret;
     next.y = shell.center.y + velocity;
     next.x = shell.center.x + fabsf(velocity);
     velocity = velocity - GRAVITY;
-    [CATransaction begin];
-    [CATransaction setValue:[NSNumber numberWithFloat:0.5f] forKey:kCATransactionAnimationDuration];
+//    [CATransaction begin];
+//    [CATransaction setValue:[NSNumber numberWithFloat:0.5f] forKey:kCATransactionAnimationDuration];
+//    
+//    CGSize shellSize = shell.frame.size;
+//    shell.frame = CGRectMake(next.x, next.y, shellSize.width, shellSize.height);
+//    
+//    [CATransaction commit];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1.0f];
     
     CGSize shellSize = shell.frame.size;
     shell.frame = CGRectMake(next.x, next.y, shellSize.width, shellSize.height);
     
-    [CATransaction commit];
+    [UIView commitAnimations];
     
     if (shell.center.y < 354 && CGRectIntersectsRect(shell.frame, ((UIImageView *)[self.view viewWithTag:enemy]).frame) == false)
     {
