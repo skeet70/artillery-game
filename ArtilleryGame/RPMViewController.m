@@ -11,6 +11,8 @@
 @implementation RPMViewController
 
 static CGPoint startLocation, endLocation, currentLocation;
+static CGFloat velocity;
+static int enemy, player, enemyTurret, playerTurret;
 
 - (IBAction)handleDrag:(UIPanGestureRecognizer *)recognizer {
     if (recognizer.state == UIGestureRecognizerStateBegan) {
@@ -44,14 +46,19 @@ static CGPoint startLocation, endLocation, currentLocation;
         CGFloat dx = endLocation.x - startLocation.x;
         CGFloat dy = endLocation.y - startLocation.y;
         CGFloat length = sqrt(dx*dx + dy*dy );
-        CGFloat velocity = length * .1;
+        velocity = length * .1;
         
         // give the lemon velocity, and have gravity act on it every second
         // handle collisions
         
         if (recognizer.view.tag == -1){
+            enemy = 3;
+            enemyTurret = 4;
+            player = 1;
+            playerTurret = 2;
+            
             // get the right turret
-            UIImageView * turret = (UIImageView *)[self.view viewWithTag:2];
+            UIImageView * turret = (UIImageView *)[self.view viewWithTag:playerTurret];
             
             // put the shell in the turret
             UIImageView * shell = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lemon_shell.png"]];
@@ -59,31 +66,17 @@ static CGPoint startLocation, endLocation, currentLocation;
             [[turret superview] addSubview:shell];
             
             // fire the shell
-            while (shell.center.y < 354 && CGRectIntersectsRect(shell.frame, ((UIImageView *)[self.view viewWithTag:3]).frame) == false)
-            {
-                CGPoint next;
-                next.y = shell.center.y + velocity;
-                next.x = shell.center.x + fabsf(velocity);
-                velocity = velocity - GRAVITY;
-                [CATransaction begin];
-                [CATransaction setValue:[NSNumber numberWithFloat:0.5f] forKey:kCATransactionAnimationDuration];
-                
-                CGSize shellSize = shell.frame.size;
-                shell.frame = CGRectMake(next.x, next.y, shellSize.width, shellSize.height);
-                
-                [CATransaction commit];
-            }
-            
+            [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1/50)];
         }
         
         if(recognizer.view.tag == -2){
-            // set up variables
-            CGFloat dx = startLocation.x - endLocation.x;
-            CGFloat dy = startLocation.y - endLocation.y;
-            CGFloat angle = atan2(dy, dx);
+            enemy = 1;
+            enemyTurret = 2;
+            player = 3;
+            playerTurret = 4;
             
             // get the right turret
-            UIImageView * turret = (UIImageView *)[self.view viewWithTag:4];
+            UIImageView * turret = (UIImageView *)[self.view viewWithTag:playerTurret];
             
             // put the shell in the turret
             UIImageView * shell = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lemon_shell.png"]];
@@ -91,14 +84,30 @@ static CGPoint startLocation, endLocation, currentLocation;
             [[turret superview] addSubview:shell];
             
             // fire the shell
-            while (shell.center.y < 354 || CGRectIntersectsRect(shell.frame, ((UIImageView *)[self.view viewWithTag:1]).frame)== false)
-            {
-                break;
-            }
         }
         
     }
     
+}
+
+-(void)fireShell:(UIImageView *)shell
+{
+    CGPoint next;
+    next.y = shell.center.y + velocity;
+    next.x = shell.center.x + fabsf(velocity);
+    velocity = velocity - GRAVITY;
+    [CATransaction begin];
+    [CATransaction setValue:[NSNumber numberWithFloat:0.5f] forKey:kCATransactionAnimationDuration];
+    
+    CGSize shellSize = shell.frame.size;
+    shell.frame = CGRectMake(next.x, next.y, shellSize.width, shellSize.height);
+    
+    [CATransaction commit];
+    
+    if (shell.center.y < 354 && CGRectIntersectsRect(shell.frame, ((UIImageView *)[self.view viewWithTag:enemy]).frame) == false)
+    {
+        [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1/50)];
+    }
 }
 
 

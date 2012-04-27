@@ -13,7 +13,6 @@
 
 @interface RPMViewController : UIViewController
 
-//@property(retain, nonatomic) IBOutlet UIImageView *tank1;
-//@property(retain, nonatomic) IBOutlet UIImageView *tank2;
 - (IBAction)handleDrag:(UIPanGestureRecognizer *)recognizer;
+-(void)fireShell:(UIImageView *)shell;
 @end
