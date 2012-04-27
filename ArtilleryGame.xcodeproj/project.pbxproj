@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D922F401549ECD3004403A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D922F3F1549ECD3004403A6 /* QuartzCore.framework */; };
 		3DE49DCB1547422000FC675E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCA1547422000FC675E /* UIKit.framework */; };
 		3DE49DCD1547422000FC675E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCC1547422000FC675E /* Foundation.framework */; };
 		3DE49DCF1547422000FC675E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE49DCE1547422000FC675E /* CoreGraphics.framework */; };
@@ -28,6 +29,7 @@
 		3DF079061547497D005DA49A /* tank_cannon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF079041547497D005DA49A /* tank_cannon.png */; };
 		3DF0790915474C84005DA49A /* tank_cannon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF0790715474C84005DA49A /* tank_cannon2.png */; };
 		3DF0790A15474C84005DA49A /* tank2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF0790815474C84005DA49A /* tank2.png */; };
+		3DFE51E61548E9BC00D5F0D7 /* lemon_shell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE51E51548E9BC00D5F0D7 /* lemon_shell.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D922F3F1549ECD3004403A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3DE49DC61547422000FC675E /* ArtilleryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtilleryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE49DCA1547422000FC675E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3DE49DCC1547422000FC675E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +71,7 @@
 		3DF079041547497D005DA49A /* tank_cannon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tank_cannon.png; sourceTree = "<group>"; };
 		3DF0790715474C84005DA49A /* tank_cannon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tank_cannon2.png; sourceTree = "<group>"; };
 		3DF0790815474C84005DA49A /* tank2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tank2.png; sourceTree = "<group>"; };
+		3DFE51E51548E9BC00D5F0D7 /* lemon_shell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lemon_shell.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D922F401549ECD3004403A6 /* QuartzCore.framework in Frameworks */,
 				3DE49DCB1547422000FC675E /* UIKit.framework in Frameworks */,
 				3DE49DCD1547422000FC675E /* Foundation.framework in Frameworks */,
 				3DE49DCF1547422000FC675E /* CoreGraphics.framework in Frameworks */,
@@ -99,6 +104,7 @@
 			children = (
 				3DF0790115474674005DA49A /* lemon.png */,
 				3DF078FF15474657005DA49A /* lemon_thumbx2.png */,
+				3DFE51E51548E9BC00D5F0D7 /* lemon_shell.png */,
 				3DF0790715474C84005DA49A /* tank_cannon2.png */,
 				3DF0790815474C84005DA49A /* tank2.png */,
 				3DF079031547497D005DA49A /* tank.png */,
@@ -124,6 +130,7 @@
 		3DE49DC91547422000FC675E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D922F3F1549ECD3004403A6 /* QuartzCore.framework */,
 				3DE49DCA1547422000FC675E /* UIKit.framework */,
 				3DE49DCC1547422000FC675E /* Foundation.framework */,
 				3DE49DCE1547422000FC675E /* CoreGraphics.framework */,
@@ -256,6 +263,7 @@
 				3DF079061547497D005DA49A /* tank_cannon.png in Resources */,
 				3DF0790915474C84005DA49A /* tank_cannon2.png in Resources */,
 				3DF0790A15474C84005DA49A /* tank2.png in Resources */,
+				3DFE51E61548E9BC00D5F0D7 /* lemon_shell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

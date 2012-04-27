@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#define GRAVITY 9.81*.1
+#define PI 3.14159265
 
 @interface RPMViewController : UIViewController
 
 //@property(retain, nonatomic) IBOutlet UIImageView *tank1;
 //@property(retain, nonatomic) IBOutlet UIImageView *tank2;
-- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+- (IBAction)handleDrag:(UIPanGestureRecognizer *)recognizer;
 @end
