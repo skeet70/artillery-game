@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#define GRAVITY 9.81*.1
-#define PI 3.14159265
+
+#define GRAVITY 9.81*.05
 
 @interface RPMViewController : UIViewController
 

@@ -5,14 +5,16 @@
 //  Created by Ryan Murphy on 4/24/12.
 //  Copyright (c) 2012 Montana State University. All rights reserved.
 //
+//  Free-for-All tank game!
+//  Drag from the tank forward for power and angle, three hits makes a winner!
 
 #import "RPMViewController.h"
 
 @implementation RPMViewController
 
 static CGPoint startLocation, endLocation, currentLocation;
-static CGFloat velocity;
-static int enemy, player, enemyTurret, playerTurret;
+static CGFloat velocity, yAccel, angle;
+static int enemy, player, enemyTurret, playerTurret, playerOneHit, playerTwoHit;
 
 - (IBAction)handleDrag:(UIPanGestureRecognizer *)recognizer {
     if (recognizer.state == UIGestureRecognizerStateBegan) {
@@ -26,14 +28,14 @@ static int enemy, player, enemyTurret, playerTurret;
         if (recognizer.view.tag == -1){
             CGFloat dx = currentLocation.x - startLocation.x;
             CGFloat dy = currentLocation.y - startLocation.y;
-            CGFloat angle = atan2(dy, dx);
+            angle = atan2(dy, dx);
             [(UIImageView *)[self.view viewWithTag:2] setTransform:CGAffineTransformMakeRotation(angle)];
         }
         
         if(recognizer.view.tag == -2){
             CGFloat dx = startLocation.x - currentLocation.x;
             CGFloat dy = startLocation.y - currentLocation.y;
-            CGFloat angle = atan2(dy, dx);
+            angle = atan2(dy, dx);
             [(UIImageView *)[self.view viewWithTag:4] setTransform:CGAffineTransformMakeRotation(angle)];
         }
         
@@ -45,17 +47,17 @@ static int enemy, player, enemyTurret, playerTurret;
         
         CGFloat dx = endLocation.x - startLocation.x;
         CGFloat dy = endLocation.y - startLocation.y;
-        CGFloat length = sqrt(dx*dx + dy*dy );
-        velocity = length * .1;
-        
-        // give the lemon velocity, and have gravity act on it every second
-        // handle collisions
+        velocity = sqrt(dx*dx + dy*dy )*.1;
         
         if (recognizer.view.tag == -1){
             enemy = 3;
             enemyTurret = 4;
             player = 1;
             playerTurret = 2;
+            CGFloat dx = endLocation.x - startLocation.x;
+            CGFloat dy = endLocation.y - startLocation.y;
+            angle = atan2(dy, dx);
+            yAccel = (velocity*2)*sinf(angle);
             
             // get the right turret
             UIImageView * turret = (UIImageView *)[self.view viewWithTag:playerTurret];
@@ -66,7 +68,7 @@ static int enemy, player, enemyTurret, playerTurret;
             [[turret superview] addSubview:shell];
             
             // fire the shell
-            [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1/50)];
+            [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1.0/30.0)];
         }
         
         if(recognizer.view.tag == -2){
@@ -74,6 +76,10 @@ static int enemy, player, enemyTurret, playerTurret;
             enemyTurret = 2;
             player = 3;
             playerTurret = 4;
+            CGFloat dx = startLocation.x - endLocation.x;
+            CGFloat dy = startLocation.y - endLocation.y;
+            angle = atan2(dy, dx);
+            yAccel = (velocity*2)*sinf(-angle);
             
             // get the right turret
             UIImageView * turret = (UIImageView *)[self.view viewWithTag:playerTurret];
@@ -84,7 +90,7 @@ static int enemy, player, enemyTurret, playerTurret;
             [[turret superview] addSubview:shell];
             
             // fire the shell
-            [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1/50)];
+            [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1.0/30.0)];
         }
         
     }
@@ -94,27 +100,73 @@ static int enemy, player, enemyTurret, playerTurret;
 -(void)fireShell:(UIImageView *)shell
 {
     CGPoint next;
-    next.y = shell.center.y + velocity;
-    next.x = shell.center.x + fabsf(velocity);
-    velocity = velocity - GRAVITY;
-//    [CATransaction begin];
-//    [CATransaction setValue:[NSNumber numberWithFloat:0.5f] forKey:kCATransactionAnimationDuration];
-//    
-//    CGSize shellSize = shell.frame.size;
-//    shell.frame = CGRectMake(next.x, next.y, shellSize.width, shellSize.height);
-//    
-//    [CATransaction commit];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:1.0f];
+    if (player == 1) {
+        CGFloat xAccel = (velocity*.3)*cosf(fabsf(angle));
+        next.y = shell.center.y + yAccel*.8;
+        next.x = shell.center.x + xAccel;
+        yAccel += GRAVITY;
+    }
+    else if(player == 3){
+        CGFloat xAccel = velocity*cosf(fabsf(angle));
+        next.y = shell.center.y + yAccel;
+        next.x = shell.center.x - xAccel;
+        yAccel += GRAVITY;
+    }
+    
+    [UIImageView beginAnimations:nil context:NULL];
+    [UIImageView setAnimationDuration:12.0f];
     
     CGSize shellSize = shell.frame.size;
     shell.frame = CGRectMake(next.x, next.y, shellSize.width, shellSize.height);
     
-    [UIView commitAnimations];
+    [UIImageView commitAnimations];
     
-    if (shell.center.y < 354 && CGRectIntersectsRect(shell.frame, ((UIImageView *)[self.view viewWithTag:enemy]).frame) == false)
+    // Comment this out to see the actual firing, since the RectIntersectRect isn't working.
+    // couldn't get CGRectIntersectRect, CGRectContainsRect, CGRectContainsPoint to work
+    UIImageView * enemyTank = (UIImageView *)[self.view viewWithTag:enemy];
+    if (CGRectIntersectsRect(enemyTank.frame, shell.frame)){
+        if (enemy == 1){
+            playerOneHit += 1;
+            if (playerOneHit >= 3) {
+                UIAlertView * winner = (UIAlertView *)[[UIAlertView alloc] 
+                                                       initWithTitle:@"Game Over"
+                                                       message:@"Congratulations Player Two, you win!"
+                                                       delegate:nil
+                                                       cancelButtonTitle:@"OK"
+                                                       otherButtonTitles:nil];
+                
+                [winner show];
+                playerOneHit = 0;
+                playerTwoHit = 0;
+                shell.hidden = true;
+                return;
+            }
+        }
+        else if (enemy == 3){
+            playerTwoHit += 1;
+            if(playerTwoHit >= 3){
+                UIAlertView * winner = (UIAlertView *)[[UIAlertView alloc] 
+                                                        initWithTitle:@"Game Over"
+                                                        message:@"Congratulations Player One, you win!"
+                                                        delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles:nil];
+                                        
+                [winner show];
+                playerOneHit = 0;
+                playerTwoHit = 0;
+                shell.hidden = true;
+                return;
+            }
+        }
+    };
+    if (shell.center.y < 90)
     {
-        [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1/50)];
+        [self performSelector:@selector(fireShell:) withObject:shell afterDelay:(1.0/30.0)];
+    }
+    else{
+        shell.hidden = true;
+        return;
     }
 }
 
