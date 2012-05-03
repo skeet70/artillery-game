@@ -13,3 +13,13 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @end
+
+/*
+ The game appears reasonably well conceived, but the codebase is not object-oriented
+ and the game is partially broken - every shell I fire gives a "you won" alert. You
+ should at least have ShellViews and TankViews to distribute the game logic to
+ model classes.
+ 
+ Grade: 80%
+ Course grade: 72% (B-)
+*/
